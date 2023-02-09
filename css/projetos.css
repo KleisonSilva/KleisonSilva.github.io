@@ -1,0 +1,158 @@
+#projetos {
+    background: linear-gradient(63.13deg,  rgba(101, 24, 180, 1) 21.04%, #151515 52.89%);
+}
+
+.projetos {
+    padding-top: 93px;
+}
+
+.projetos h2, .projetos a {
+    text-align: center;
+}
+
+.projetos h2 {
+    padding-bottom: 70px;
+}
+
+button {
+    padding: 10px 100px;
+    border-radius: 25px;
+    cursor: pointer;
+    color: white;
+    background-color: #151515;
+    border: none;
+    transition: ease-in-out 0.3s;
+    
+}
+
+.button::before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    inset: -2px;
+    border-radius: 9px;
+    background: linear-gradient(-45deg,
+            rgba(147, 88, 247, 1),
+            rgba(16, 215, 226, 1));
+    background-size: 400%;
+    animation: move infinite forwards 4s;
+}
+
+button:hover {
+    background-color: #272727;
+    text-shadow: 1px 1px 3px #00bbc5;
+}
+
+
+@keyframes move {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.button p {
+    padding: 9 0 5px;
+}
+.github-link {
+    margin: 0 auto;
+    padding-top: 35px;
+    padding-bottom: 93px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    gap: 35px;
+}
+
+.github-link a::after {
+    content: "";
+    display: block;
+    border-bottom: 2px solid rgba(210, 64, 116, 1);
+    margin-top: 5px;
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+}
+.github-link a:hover::after {
+    transform: scaleX(1);
+}
+.projetos a {
+    display: inline;
+}
+
+.pro {
+    background-color: #C4C4C4;
+    height: 195px;
+    width: 310px;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    overflow: hidden;
+    transition: ease-in-out 0.3s;
+}
+
+.pro div p {
+    font-family: 'Fira Sans', sans-serif;
+    font-size: 20px;
+    color: #d2d2d2;
+}
+
+.pro:hover {
+    letter-spacing: 5px;
+}
+
+.pro div {
+    background: linear-gradient(63.13deg,  rgba(210, 64, 116, 1) 21.04%, #151515 52.89%);;
+    width: 1000px;
+    text-align: center;
+    padding: 5% 0;
+    transform: rotate(-50deg);
+}
+
+.escondido {
+    opacity: 0;
+    display: none;
+    transition: 1000ms;
+}
+
+.projetos-itens {
+    display: flex;
+    height: 0 auto;
+    flex-wrap: wrap;
+    gap: 29.5px;
+    justify-content: center;
+}
+
+@media (max-width:1200px) {
+  .projetos{
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+  }
+
+  #projetos {
+      display: flex;
+      justify-content: center;
+  }
+
+  .projetos-itens {
+      flex-direction: column;
+  }
+
+
+}
+@media (max-width:950px) {
+    .pro {
+        max-width: 300px;
+    }
+
+}
